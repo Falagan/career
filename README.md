@@ -76,3 +76,22 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 }
 
 ```
+- Storybook
+```
+npx -p @storybook/cli sb init
+
+```
+- Analyzing Bundle Size
+```
+npm install --save source-map-explorer
+
+   "scripts": {
++    "analyze": "source-map-explorer 'build/static/js/*.js'",
+     "start": "react-scripts start",
+     "build": "react-scripts build",
+     "test": "react-scripts test",
+```
+- Adding bootstrap
+```
+npm install bootstrap
+```
