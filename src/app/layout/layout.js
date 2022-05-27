@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ThemesConfig } from '../../assets/themes/themes.config';
 
-export function Layout() {
+export default function Layout() {
   const [theme, setTheme] = useState(ThemesConfig.themes.Light);
 
   function switchTheme() {
@@ -11,7 +11,7 @@ export function Layout() {
   }
 
   return (
-    <div id="layout" className="light-theme">
+    <div id="layout" className={ThemesConfig.default}>
       <div className="container-fluid h-100">
         <div className="row h-100">
           <div className="col-12">

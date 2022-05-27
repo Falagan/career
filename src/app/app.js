@@ -1,5 +1,5 @@
-import { Router } from './router/router';
+import Router from './router/router';
 
-export function App() {
+export default function App() {
   return <Router />;
 }
