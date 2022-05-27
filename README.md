@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Init Configuration
 
-1.Husky, Prettier, lint-staged and conventional commit
+ > Husky, Prettier, lint-staged and conventional commit
 ```
 npm install --save husky lint-staged prettier
 npm install --save-dev @commitlint/{config-conventional,cli}
@@ -12,41 +12,40 @@ npm set-script prepare "husky install"
 npx husky install
 ```
 
-- Add git hook pre-commit
+> Add git hook pre-commit
 
 ```
 npx husky add .husky/pre-commit
 ```
 
-- Add to pre-commit file:
+> Add to pre-commit file:
 ```
 "#!/bin/sh 
 . "$(dirname "$0")/_/husky.sh"
 npm run lint-staged"
 ```
-- Add to git hook
+> Add to git hook
 ```
 git add .husky/pre-commit
 ```
 
-- Add git hook commit-msg
+> Add git hook commit-msg
 
 ```
 npx husky add .husky/commit-msg
 ```
-
-- Add to commit-msg file:
+> Add to commit-msg file:
 ```
 "#!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
 npx --no -- commitlint --edit ''"
 ```
-- Add to git hook
+> Add to git hook
 ```
 git add .husky/commit-msg
 ```
-- Add lint-staged config to package.json
+> Add lint-staged config to package.json
 ```
   "dependencies": {
     // ...
@@ -59,11 +58,11 @@ git add .husky/commit-msg
 + },
   "scripts": {
 ``` 
-- Add commitlint file config
+> Add commitlint file config
 ```
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
-- Add prettier config
+> Add prettier config
 .prettierrc
 ```
 {
@@ -76,12 +75,11 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 }
 
 ```
-- Storybook
+> Storybook
 ```
 npx -p @storybook/cli sb init
-
 ```
-- Analyzing Bundle Size
+> Analyzing Bundle Size
 ```
 npm install --save source-map-explorer
 
@@ -91,11 +89,21 @@ npm install --save source-map-explorer
      "build": "react-scripts build",
      "test": "react-scripts test",
 ```
-- Adding bootstrap
+> Adding bootstrap
 ```
 npm install bootstrap
 ```
-- Router
+> Router
 ```
 npm install --save react-router-dom
 ``` 
+> Environments
+
+```
+$ set REACT_APP_STAGE=dev"
+```
+```
+"scripts": {
+    "start": "REACT_APP_STAGE=dev react-scripts start",
+```
+* We define a src/config.js with the different configuration by environment: dev, pre and pro.
