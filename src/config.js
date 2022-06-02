@@ -1,5 +1,8 @@
 const dev = {
-  TITLE: 'Development environment'
+  TITLE: 'Development environment',
+  API_GITHUB: {
+    user: ''
+  }
 };
 
 const pre = {

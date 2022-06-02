@@ -12,6 +12,13 @@ npm set-script prepare "husky install"
 npx husky install
 ```
 
+> Extend es-lint config
+```
+npm install eslint-plugin-react-hooks --save-dev
+```
+
+
+
 > Add git hook pre-commit
 
 ```
