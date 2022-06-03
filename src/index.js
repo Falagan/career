@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './app/app';
+import './app/config/translations';
 import './index.css';
 import reportWebVitals from './report-web-vitals';
 
