@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Header({ onSwitchTheme }) {
+export default function Header({ onSwitchTheme, onSwitchLang }) {
   return (
     <>
       <div className="container-fluid p-4">
@@ -31,6 +31,12 @@ export default function Header({ onSwitchTheme }) {
       <div className="position-absolute top-0 end-0">
         <button className="m-3" onClick={onSwitchTheme}>
           Theming
+        </button>
+        <button className="m-3" onClick={() => onSwitchLang('en')}>
+          Lang EN
+        </button>
+        <button className="m-3" onClick={() => onSwitchLang('es')}>
+          Lang SP
         </button>
       </div>
     </>
